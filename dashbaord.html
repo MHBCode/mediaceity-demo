@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logoSection">
+            <img src="Logo.png">
+        </div>
+        <div class="userSectionWrapper">
+            <div class="companyDetails">
+                <i class="bi bi-building companyIcon"></i>
+                <p>Tasweer</p>
+                <i class="bi bi-caret-down-fill arrow"></i>
+            </div>
+            <div class="userDataSection">
+                <div class="userImgContainer">
+                    <img class="userImg" src="ktimg.jpg">
+                </div>
+                <div class="sittingsMenu">
+                    <i class="bi bi-gear-wide-connected"></i>
+                </div>
+                <div class="sittingsMenu">
+                    <i class="bi bi-translate"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="greetingsSection pageSection">
+        <p class="greeetingParagraph">
+            
+            <span>
+                Welcome,
+            </span>
+                Karim Thomas
+            <img src="waving-hand.png"/>
+        </p>
+        <a class="btn-1" href="requests.html">
+            <i class="bi bi-file-earmark-plus-fill"></i>
+            Create a new request
+        </a>
+    </section>
+    <section class="main-section">
+        <section class="cardSection pageSection">
+            <div class="cardSectionCard listCard">
+                <ul class="notificationList">
+                    <li class="main-li">
+                        <h2>
+                            Notifications
+                        </h2>
+                        <div>
+    
+                        </div>
+                    </li>
+                    <li>
+                        <div class="aboutNotification">
+                            <p class="notifiactionTitle">
+                                You don't have any notifications!
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSectionCard boardCard" style="max-height: 250px;">
+                <h2 class="sectionHeader">
+                    Requests statistics
+                </h2>
+                <canvas id="requestsChart" width="250" height="250"></canvas>
+            </div>
+        </section>
+        <section class="multiTableSection">
+            <section class="tableSection pageSection">
+                <div class="checkAll">
+                    <div class="checkAllIC">
+                        Last request
+                    </div>
+                </div>
+                <table class="requestsTable">
+                    <tbody>
+                        <tr>
+                            <td class="mainTR">
+                                 First name
+                            </td>
+                            <td>
+                                <a class="anchor" href="requestDetails.html">
+                                    Karim
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mainTR">
+                                 Last name
+                            </td>
+                            <td>
+                                Thomas
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mainTR">
+                                 Business name
+                            </td>
+                            <td>
+                                Tasweer
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mainTR">
+                                 Phone number
+                            </td>
+                            <td>
+                                71007040
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mainTR">
+                                 Email
+                            </td>
+                            <td>
+                                k.thomas@ict.com.qa
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mainTR">
+                                Primary Business Activity
+                            </td>
+                            <td>
+                                Photography and Visual Arts
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mainTR">
+                                Desciption
+                            </td>
+                            <td>
+                                Tasweer is a platform dedicated to..
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </section>
+            <section class="tableSection pageSection allRequstsTable">
+                <div class="checkAll">
+                    <div class="checkAllIC">
+                        <i class="bi bi-box-arrow-in-up-left"></i>
+                    </div>
+                </div>
+                <div class="no-requests">
+                    <i class="bi bi-building-gear"></i>
+                    You don't have any requests!
+                </div>
+                <!-- <table class="requestsTable">
+                    <tbody>
+                        <tr>
+                            <td class="mainTR">
+                                 First name
+                            </td>
+                            <td>
+                                Karim
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mainTR">
+                                 Last name
+                            </td>
+                            <td>
+                                Thomas
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mainTR">
+                                 Business name
+                            </td>
+                            <td>
+                                Tasweer
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mainTR">
+                                 Phone number
+                            </td>
+                            <td>
+                                71007040
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mainTR">
+                                 Email
+                            </td>
+                            <td>
+                                k.thomas@ict.com.qa
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mainTR">
+                                Primary Business Activity
+                            </td>
+                            <td>
+                                Photography and Visual Arts
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mainTR">
+                                Desciption
+                            </td>
+                            <td>
+                                Tasweer is a platform dedicated to..
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table> -->
+            </section>
+        </section>
+    </section>
+    <div class="noMobile">
+        .لم يتم بعد تجهيز نسخة الهاتف من هذه الصفحة, يمكنك التصفح بإستخدام جهاز الحاسوب فقط.
+    </div>
+    <div id="chatBotIcon" onclick="toggleChat()">
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-labelledby="chatbotLogoTitle"
+          role="img"
+        >
+          <title id="chatbotLogoTitle">Chatbot Logo</title>
+          <!-- Purple circular background -->
+          <circle
+            cx="50"
+            cy="50"
+            r="50"
+            fill="#2D235C"
+          />
+          <!-- Speech bubble in white -->
+          <path
+            fill="#FFFFFF"
+            d="
+              M 30 30 
+              H 70 
+              A 5 5 0 0 1 75 35 
+              V 45 
+              A 5 5 0 0 1 70 50 
+              H 55
+              L 45 60 
+              V 50
+              H 30
+              A 5 5 0 0 1 25 45 
+              V 35 
+              A 5 5 0 0 1 30 30 
+              Z
+            "
+          />
+        </svg>
+      </div>    
+    <script src="dashbaord.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Qatar Media City - Mockup with Chatbot (Inline SVG)</title>
+  <style>
+    /* Reset default browser margins/paddings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background: #fff; /* White behind header/footer areas */
+    }
+
+    /***************
+     * TOP NAV BAR *
+     **************/
+    header {
+      width: 100%;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1000;
+    }
+
+    /* Left side: Logo + Nav items */
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-right: 40px;
+    }
+
+    .logo img {
+      height: 40px; /* adjust as needed */
+      margin-right: 10px;
+    }
+
+    /* Navigation Menu */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav ul li a:hover {
+      color: #2D235C;
+    }
+
+    /* Right side: language, search, button */
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .language-switch,
+    .search-btn {
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: #000;
+    }
+
+    .start-business-btn {
+      background-color: #2D235C;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .start-business-btn:hover {
+      background-color: #3E2D7A;
+    }
+
+    /****************
+     * HERO SECTION *
+     ****************/
+    .hero {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 80px); /* Full view minus ~80px header */
+      background: url("middle background.png") no-repeat center center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      max-width: 600px;
+      padding: 0 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .scroll-down {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    /**************
+     * FOOTER *
+     **************/
+    footer {
+      background-color: #f8f8f8;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    /*****************************
+     * CHATBOT ICON & IFRAME CSS *
+     *****************************/
+    /* Chat icon in bottom-right corner */
+    #chatBotIcon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      z-index: 9998;
+    }
+
+    /* Container that holds the chatbot iframe (hidden by default) */
+    #chatContainer {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 400px;
+      height: 600px;
+      border-radius: 8px;
+      overflow: hidden; /* hide the iframe corners */
+      display: none;    /* hidden until user clicks the icon */
+      z-index: 9999;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      background-color: #fff;
+    }
+
+    /* Fade/slide-in animation */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Active class to show container with animation */
+    #chatContainer.active {
+      display: block;
+      animation: fadeInUp 0.4s ease forwards;
+    }
+    .login-btn{
+      text-decoration: none;
+      cursor: pointer;
+      color: #3E2D7A;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header>
+    <div class="nav-left">
+      <!-- Logo only, no text -->
+      <div class="logo">
+        <img src="Logo.png" alt="Media City Logo" />
+      </div>
+      <!-- Navigation Menu -->
+      <nav>
+        <ul>
+          <li><a href="#">Why Qatar?</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">How We Can Help</a></li>
+          <li><a href="#">Media Center</a></li>
+          <li><a href="#">Let's Connect</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <!-- Language switcher (Placeholder) -->
+      <div class="language-switch">العربية</div>
+      <!-- Search (Placeholder) -->
+      <div class="search-btn">🔍</div>
+      <!-- Start Your Business Button -->
+      <a href="#" class="start-business-btn">Start your Business</a>
+      <a class="login-btn" href="dashbaord.html">Login</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <div class="hero-content">
+      <p>
+        Welcome to Qatar's premiere media hub, where innovation meets opportunity.<br>
+        Explore endless possibilities for your media and creative ventures.
+      </p>
+      <div class="scroll-down">Scroll Down</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Media City Qatar. All rights reserved.
+  </footer>
+
+  <!-- CHATBOT ICON (INLINE SVG) -->
+  <div id="chatBotIcon" onclick="toggleChat()">
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-labelledby="chatbotLogoTitle"
+      role="img"
+    >
+      <title id="chatbotLogoTitle">Chatbot Logo</title>
+      <!-- Purple circular background -->
+      <circle
+        cx="50"
+        cy="50"
+        r="50"
+        fill="#2D235C"
+      />
+      <!-- Speech bubble in white -->
+      <path
+        fill="#FFFFFF"
+        d="
+          M 30 30 
+          H 70 
+          A 5 5 0 0 1 75 35 
+          V 45 
+          A 5 5 0 0 1 70 50 
+          H 55
+          L 45 60 
+          V 50
+          H 30
+          A 5 5 0 0 1 25 45 
+          V 35 
+          A 5 5 0 0 1 30 30 
+          Z
+        "
+      />
+    </svg>
+  </div>
+
+  <!-- CHAT CONTAINER (HOLDS THE IFRAME) -->
+  <div id="chatContainer">
+    <iframe
+      src="https://copilotstudio.microsoft.com/environments/Default-f8732124-c5e2-4e51-9ce1-5530ffc7be54/bots/cr691_mediaCityOnboardingAgent/webchat?__version__=2"
+      frameborder="0"
+      style="width: 100%; height: 100%;"
+    ></iframe>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleChat() {
+      const chatContainer = document.getElementById('chatContainer');
+      // Toggle "active" class to show/hide with animation
+      chatContainer.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
