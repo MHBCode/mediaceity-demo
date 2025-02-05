@@ -167,11 +167,19 @@ body{
     align-items: end;
     justify-content: center;
 }
-.aboutNotification p{
+.aboutNotification p {
     margin: 0;
+    align-items: flex-start;
+    gap: 0.5rem;
+    border-bottom: 1px solid #2D235C;
+    padding-bottom: 0.3rem;
+}
+.aboutNotification p i{
+margin-top: 4px;
+font-weight: 18px;
 }
 .notifiactionTitle{
-    color: #8A1538;
+    color: #2D235C;
     font-weight: 300;
 }
 .date{
@@ -270,6 +278,8 @@ body{
     padding: 10px 5px;
     text-align: left;
     font-size: 13px;
+    height: 40px;
+    max-height: 40px;
 }
 
 .requestsTable th {
@@ -287,6 +297,7 @@ body{
 tbody tr{
     background-color: white;
     display: unset;
+    flex: 1;
 
 }
 tbody tr:not(:last-child){
@@ -364,7 +375,7 @@ tbody{
     font-size: 50px;
 }
 .allRequstsTable{
-    min-height: 420px;
+    min-height: 373px;
     justify-content: flex-start;
 }
 .userSectionWrapper{
@@ -472,6 +483,17 @@ tbody{
     cursor: pointer;
     z-index: 9998;
   }
+.buttons-top{
+    gap: 1rem;
+    align-items: center;
+}
+.hasHighlight{
+    background-color: #27903f;
+    padding: 0.3rem;
+    color: white;
+    border-radius: 5px;
+    margin: 0;
+}
 @media screen and (max-width: 700px) {
     .noMobile{
         display: flex;
